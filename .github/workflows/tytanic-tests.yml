@@ -20,9 +20,15 @@ jobs:
           tool: tytanic@0.3.3
 
       - name: Run phase test suite
-        run: scripts/test-phases.sh
+        run: |
+          # Zjistíme, kde přesně binárka je, a nastavíme TT
+          # Cargo install dává binárky do ~/.cargo/bin/
+          export TT=$(which tytanic || which tt)
+          scripts/test-phases.sh
         env:
-          TT: tt
+          # Pokud skript vyžaduje TT jako env proměnnou, 
+          # nasměrujeme ji na nainstalovanou binárku
+          TT: tytanic
 
       - name: Archive test artifacts
         uses: actions/upload-artifact@v4
