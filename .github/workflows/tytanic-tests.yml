@@ -21,14 +21,20 @@ jobs:
 
       - name: Run phase test suite
         run: |
-          # Zjistíme, kde přesně binárka je, a nastavíme TT
-          # Cargo install dává binárky do ~/.cargo/bin/
-          export TT=$(which tytanic || which tt)
-          scripts/test-phases.sh
-        env:
-          # Pokud skript vyžaduje TT jako env proměnnou, 
-          # nasměrujeme ji na nainstalovanou binárku
-          TT: tytanic
+          # 1. Najdeme cestu k nainstalované binárce 'tytanic'
+          TYTANIC_BIN=$(which tytanic)
+          
+          # 2. Vytvoříme v systému alias 'tt', který skript vyžaduje
+          sudo ln -sf "$TYTANIC_BIN" /usr/local/bin/tt
+          
+          # 3. Nastavíme proměnnou prostředí TT pro skript
+          export TT="/usr/local/bin/tt"
+          
+          # 4. Zajistíme, že testovací skript je spustitelný
+          chmod +x scripts/test-phases.sh
+          
+          # 5. Spustíme testy
+          ./scripts/test-phases.sh
 
       - name: Archive test artifacts
         uses: actions/upload-artifact@v4
