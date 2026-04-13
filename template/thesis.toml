@@ -1,0 +1,65 @@
+lang = "cs" # Use: cs | en.
+draft = false # Use: true | false
+faculty = "fvl" # Use: fvl | fvt | vlf | uo.
+program = "Řízení a použití ozbrojených sil" # Your input.
+specialization = "Management informačních zdrojů" # Your input.
+
+[thesis]
+type = "master" # Use: bachelor | master | doctoral.
+title = "Název práce" # Your input.
+
+[author]
+prefix = "rtm." # Your input.
+name = "Jan" # Your input.
+surname = "Novák" # Your input.
+sex = "M" # Use: M | F.
+
+[supervisor]
+prefix = "pplk. Ing." # Your input.
+name = "Jana" # Your input.
+surname = "Nováková" # Your input.
+suffix = "Ph.D." # Your input.
+sex = "F" # Use: M | F.
+
+[advisor]
+prefix = "Mgr." # Your input.
+name = "Jan" # Your input.
+surname = "Novák" # Your input.
+
+[co_supervisor]
+prefix = "Ing." # Your input.
+name = "František" # Your input.
+surname = "Novák" # Your input.
+
+[lists]
+assignment = true # Use: true | false
+acknowledgement = true # Use: true | false
+declaration = true # Use: true | false
+ai_used = true # Use: true | false
+acronyms = true # Use: true | false
+terms = true # Use: true | false
+guide = true # Use: true | false
+docs = false # Use: true | false
+bibliography = true # Use: true | false
+submit_check = false # Use: true | false
+
+[outlines]
+headings = true # Use: true | false
+acronyms = true # Use: true | false
+terms = true # Use: true | false
+figures = true # Use: true | false
+tables = true # Use: true | false
+equations = false # Use: true | false
+listings = false # Use: true | false
+
+[bibliography]
+source = "bib" # Use: bib | yml
+citation_style = "numeric" # Use: numeric | harvard
+
+[theme]
+color = true # Use: true | false. Master toggle — false = everything black & white.
+notes_colored = true # Use: true | false. false = callout blocks (warning, definition, …) rendered in grey.
+links_colored = true # Use: true | false. false = hyperlinks and references rendered in black.
+faculty_colored = true # Use: true | false. false = faculty color not used as link color fallback.
+faculty_color = "" # Optional hex override for faculty color, e.g. #808205
+link_color = "#2D4979" # Optional hex override for links/refs (takes absolute priority over faculty_color).

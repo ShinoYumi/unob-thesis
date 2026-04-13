@@ -1,0 +1,25 @@
+[iso]
+short = "ISO"
+en = "International Organization for Standardization"
+cs = "Mezinárodní organizace pro standardizaci"
+
+[acr]
+short = "AČR"
+cs = "Armáda České republiky"
+#glossary = "Bezpečnostní model s principem nedůvěřovat implicitně žádnému prvku."
+
+[llm]
+short = "LLM"
+en = "Large Language Model"
+cs = "Velký jazykový model"
+glossary = "Velký jazykový model používaný pro generování a zpracování textu."
+
+[zero_trust]
+short = "Zero Trust"
+cs = "nulová důvěra"
+glossary = "Bezpečnostní model s principem nedůvěřovat implicitně žádnému prvku sítě."
+
+[cacr]
+short = "ČAČR"
+cs = "Armáda České republiky"
+#glossary = "Bezpečnostní model s principem nedůvěřovat implicitně žádnému prvku."

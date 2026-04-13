@@ -1,0 +1,1 @@
+#import "../glossary.typ": glossary-show, normalize-glossary-input, glossary-to-acronyms, glossary-to-terms, normalize-acronyms-input, normalize-terms-input, has-used-acronyms, has-used-terms, generate-acronyms-list, generate-terms-list, init-glossary-runtime, validate-glossary-registry, singular, plural, first, first-plural, acr, trm, trmpl

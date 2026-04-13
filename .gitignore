@@ -1,0 +1,13 @@
+.tools/
+build/
+
+# Temporary local Typst config wrappers
+template/.tmp-*.typ
+template/.tmp-*.toml
+
+# Downloaded local fonts
+resources/fonts/*.otf
+
+# OS artifacts
+.DS_Store
+Thumbs.db
